@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 5 — The /f/ Files | Year 6 Spelling</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#fbf9f4; --ink:#1b2a4a; --amber:#e8930c; --teal:#0e7c7b; --card:#fff;
+    --line:#e6e1d6; --amber-soft:#fdf0d9; --amber-edge:#f2c785; --teal-soft:#e1efee;
+    --ink-soft:#56607a; --good:#1f7a4d; --good-soft:#e3f3ea; --bad:#c0392b; --bad-soft:#fdeceb;
+    --shadow:0 2px 5px rgba(27,42,74,.06), 0 10px 28px rgba(27,42,74,.06); --radius:16px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important;transition:none!important} }
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:"Atkinson Hyperlegible",system-ui,sans-serif; font-size:18px; line-height:1.55; -webkit-text-size-adjust:100%}
+  h1,h2,h3,.eyebrow,.pill,.syl-row,.patch-word,.cellL,.chip{font-family:"Space Grotesk",system-ui,sans-serif}
+  h2{font-size:1.5rem; margin:0 0 .2em; letter-spacing:-.01em}
+  h3{font-size:1.12rem; margin:0 0 .35em}
+  p{margin:.4em 0}
+  kbd{font-family:"Space Grotesk"; background:#eee7d8; border:1px solid #d8cfba; border-radius:5px; padding:1px 6px; font-size:.85em}
+  :focus-visible{outline:3px solid var(--amber); outline-offset:2px; border-radius:6px}
+
+  header.band{background:var(--ink); color:#fff; padding:30px 22px 26px}
+  .band-inner{max-width:1000px; margin:0 auto}
+  .eyebrow{text-transform:uppercase; letter-spacing:.16em; font-size:.72rem; font-weight:600; color:var(--amber); margin:0 0 8px}
+  .band h1{font-weight:700; font-size:2.4rem; line-height:1.05; margin:0 0 10px; letter-spacing:-.02em}
+  .hook{color:#c9d2e6; font-size:1.05rem; margin:0; max-width:62ch}
+  .meta-row{margin-top:16px; display:flex; flex-wrap:wrap; gap:8px}
+  .meta-row span{background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); padding:5px 11px; border-radius:999px; font-size:.78rem; color:#dde3f1}
+
+  nav.pills{position:sticky; top:0; z-index:40; background:rgba(251,249,244,.93); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); padding:9px 12px}
+  .pills-inner{max-width:1000px; margin:0 auto; display:flex; gap:7px; overflow-x:auto; -webkit-overflow-scrolling:touch}
+  .pill{flex:0 0 auto; border:1px solid var(--line); background:#fff; color:var(--ink); padding:8px 13px; border-radius:999px; font-size:.82rem; font-weight:500; cursor:pointer; text-decoration:none; min-height:40px; display:inline-flex; align-items:center}
+  .pill:hover{border-color:var(--teal); color:var(--teal)}
+
+  main{max-width:1000px; margin:0 auto; padding:8px 18px 60px}
+  section{scroll-margin-top:64px; padding:30px 0 6px; border-top:1px solid var(--line)}
+  section:first-of-type{border-top:none}
+  .sec-head{display:flex; align-items:baseline; gap:12px; margin-bottom:14px}
+  .sec-no{font-weight:700; color:var(--amber); font-size:.95rem; border:2px solid var(--amber-edge); border-radius:8px; padding:2px 9px; flex:0 0 auto; font-family:"Space Grotesk"}
+  .lead{color:var(--ink-soft); max-width:66ch}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:20px; margin:14px 0}
+
+  button{font-family:inherit}
+  .btn{background:var(--ink); color:#fff; border:none; border-radius:10px; padding:11px 18px; font-size:.95rem; font-weight:700; cursor:pointer; min-height:44px; font-family:"Space Grotesk"}
+  .btn:hover{background:#243a63}
+  .btn.ghost{background:#fff; color:var(--ink); border:1.5px solid var(--line)}
+  .btn.ghost:hover{border-color:var(--teal); color:var(--teal)}
+  .btn.amber{background:var(--amber); color:#3a2400}
+  .btn:disabled{opacity:.45; cursor:not-allowed}
+
+  /* warm-up quiz */
+  .q{border:1px solid var(--line); border-radius:12px; padding:16px; margin:12px 0; background:#fff}
+  .q .stem{font-weight:700; margin-bottom:10px}
+  .opts{display:grid; gap:8px}
+  .opt{text-align:left; background:#fcfbf7; border:1.5px solid var(--line); color:var(--ink); padding:11px 14px; border-radius:10px; cursor:pointer; min-height:44px; font-size:.95rem}
+  .opt:hover{border-color:var(--teal)}
+  .opt.correct{background:var(--good-soft); border-color:var(--good); color:var(--good)}
+  .opt.wrong{background:var(--bad-soft); border-color:var(--bad); color:#a8261b}
+  .opt[disabled]{cursor:default}
+  .fixup{margin-top:10px; background:var(--amber-soft); border-left:5px solid var(--amber); border-radius:0 10px 10px 0; padding:11px 14px; font-size:.92rem; display:none}
+  .fixup.show{display:block}
+  .fixup b{color:#a8540b}
+  .scorebar{display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-top:6px; background:var(--teal-soft); border:1px solid #bfdedc; border-radius:12px; padding:12px 16px}
+  .scorebar strong{font-family:"Space Grotesk"; font-size:1.15rem}
+
+  /* teaching cards */
+  .teach-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+  @media(max-width:760px){.teach-grid{grid-template-columns:1fr}}
+  .teach .svg-wrap{background:#fbfaf6; border:1px solid var(--line); border-radius:12px; padding:12px; margin:.3em 0 .6em}
+  .remember{background:var(--teal-soft); border:1px solid #bfdedc; border-radius:10px; padding:10px 13px; font-size:.9rem; margin-top:8px}
+  .remember b{color:var(--teal); font-family:"Space Grotesk"}
+
+  /* syllable splitter */
+  .syl{display:grid; gap:14px}
+  .syl-card{background:#fff; border:1.5px solid var(--line); border-radius:14px; padding:16px; box-shadow:var(--shadow)}
+  .syl-head{display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:6px}
+  .syl-head .hint{font-size:.82rem; color:var(--ink-soft)}
+  .syl-row{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; font-weight:700; font-size:1.9rem; background:#fbfaf6; border:1px solid var(--line); border-radius:12px; padding:16px 8px}
+  .syl-letter{padding:2px 0; color:var(--ink)}
+  .syl-gap{width:20px; height:44px; border:none; background:transparent; cursor:pointer; border-radius:6px; display:flex; align-items:center; justify-content:center; padding:0}
+  .syl-gap:hover{background:#efe9dc}
+  .syl-gap .bar{width:4px; height:32px; background:transparent; border-radius:2px}
+  .syl-gap.brk .bar{background:var(--amber)}
+  .syl-gap.ok .bar{background:var(--good)}
+  .syl-gap.bad{background:var(--bad-soft)} .syl-gap.bad .bar{background:var(--bad)}
+  .syl-gap.miss .bar{background:var(--good); opacity:.45}
+  .syl-row.solved{background:var(--good-soft); border-color:var(--good)}
+  .syl-foot{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:10px}
+  .syl-msg{font-family:"Space Grotesk"; font-weight:700}
+  .syl-msg.good{color:var(--good)} .syl-msg.bad{color:var(--bad)}
+
+  /* /f/ patch */
+  .patch-card{background:#fff; border:1.5px solid var(--line); border-radius:14px; padding:16px; box-shadow:var(--shadow); margin-bottom:12px}
+  .patch-clue{color:var(--ink-soft); font-size:.9rem; margin-bottom:6px}
+  .patch-word{display:flex; gap:2px; flex-wrap:wrap; justify-content:center; font-weight:700; font-size:1.9rem; background:#fbfaf6; border:1px solid var(--line); border-radius:12px; padding:16px 8px}
+  .patch-letter{cursor:pointer; padding:2px 6px; border-radius:7px; border:1.5px solid transparent; background:transparent; font:inherit; color:var(--ink)}
+  .patch-letter:hover{background:#efe9dc}
+  .patch-letter.bad-pick{background:var(--bad-soft); color:var(--bad)}
+  .patch-letter.fixed{background:var(--good-soft); color:var(--good); border-color:var(--good)}
+  .patch-msg{font-family:"Space Grotesk"; font-weight:700; margin-top:8px; min-height:1.3em}
+  .patch-msg.good{color:var(--good)} .patch-msg.bad{color:var(--bad)}
+  .patch-tally{font-family:"Space Grotesk"; font-weight:700; background:var(--teal-soft); border:1px solid #bfdedc; border-radius:12px; padding:11px 16px; margin-bottom:12px}
+
+  /* spell-it */
+  .spell-card{border:1.5px solid var(--line); border-radius:14px; padding:16px; margin:12px 0; background:#fff}
+  .spell-clue{font-weight:700; margin-bottom:4px}
+  .spell-clue .tag{font-size:.7rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); display:block; font-weight:600; margin-bottom:2px; font-family:"Space Grotesk"}
+  .spell-row{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:8px}
+  .spell-input{flex:1 1 220px; min-width:180px; border:1.5px solid var(--line); border-radius:10px; padding:11px 13px; font-family:"Atkinson Hyperlegible"; font-size:1.05rem; background:#fff; color:var(--ink)}
+  .spell-cells{display:flex; gap:5px; flex-wrap:wrap; margin-top:10px; min-height:6px}
+  .cellL{width:36px; height:44px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.15rem; border:1.5px solid var(--line); background:#fff}
+  .cellL.ok{background:var(--good-soft); border-color:var(--good); color:var(--good)}
+  .cellL.no{background:var(--bad-soft); border-color:var(--bad); color:#a8261b}
+  .spell-msg{margin-top:8px; font-weight:700; font-family:"Space Grotesk"; min-height:1.3em}
+  .spell-msg.good{color:var(--good)} .spell-msg.bad{color:var(--bad)}
+  .spell-help{display:none; margin-top:10px; background:var(--teal-soft); border:1px solid #bfdedc; border-radius:10px; padding:11px 13px; font-size:.92rem}
+  .spell-help.show{display:block}
+
+  /* evidence + checklist */
+  .evidence{display:flex; gap:12px; align-items:flex-start; background:#fff7e9; border:1.5px solid var(--amber-edge); border-radius:12px; padding:13px 15px; margin:14px 0; font-size:.92rem}
+  .evidence svg{flex:0 0 auto; margin-top:2px}
+  .evidence b{color:#a8540b}
+  .check-list{list-style:none; padding:0; margin:.4em 0}
+  .check-list li{display:flex; gap:11px; align-items:flex-start; padding:9px 0; border-bottom:1px dashed var(--line)}
+  .check-list input{width:24px; height:24px; margin-top:2px; accent-color:var(--teal); flex:0 0 auto}
+  .confi{display:flex; gap:9px; flex-wrap:wrap; margin-top:10px}
+  .confi button{border:1.5px solid var(--line); background:#fff; border-radius:10px; padding:10px 14px; min-height:44px; cursor:pointer; font-family:"Space Grotesk"; font-weight:600}
+  .confi button[aria-pressed=true]{background:var(--teal); color:#fff; border-color:var(--teal)}
+
+  footer{max-width:1000px; margin:0 auto; padding:24px 18px 50px; color:var(--ink-soft); font-size:.85rem}
+  .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0}
+</style>
+</head>
+<body>
+
+<header class="band">
+  <div class="band-inner">
+    <p class="eyebrow">Year 6 Spelling · Word Detectives · Lesson 5</p>
+    <h1>The /f/ Files</h1>
+    <p class="hook">The /f/ sound is a master of disguise — sometimes “f”, sometimes “ph”. And long words hide their spelling inside syllables. Time to expose both.</p>
+    <div class="meta-row" aria-label="Lesson details">
+      <span>Science: Earth &amp; Space</span>
+      <span>Focus: ph = /f/ · syllables · -sphere</span>
+      <span>AC9E6LY08</span>
+      <span>20 minutes</span>
+    </div>
+  </div>
+</header>
+
+<nav class="pills" aria-label="Jump to a section">
+  <div class="pills-inner">
+    <a class="pill" href="#recall">Recall Check</a>
+    <a class="pill" href="#notes">Strategy Notes</a>
+    <a class="pill" href="#syllables">Syllable Splitter</a>
+    <a class="pill" href="#patch">The /f/ Patch</a>
+    <a class="pill" href="#spell">Spell-It Lab</a>
+    <a class="pill" href="#closed">Case Closed</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- 1. WARM-UP -->
+  <section id="recall">
+    <div class="sec-head"><span class="sec-no">01</span><div><h2>Recall Check</h2><p class="lead">Warm up yesterday’s roots and pick up today’s trail. Tap an answer — wrong ones reveal an orange <b>fix-up</b>.</p></div></div>
+    <div id="quiz"></div>
+    <div class="scorebar" role="status" aria-live="polite">
+      <span>Score: <strong id="score">0</strong> / <strong id="total">5</strong></span>
+      <button class="btn ghost" id="jumpFix" disabled>Jump to my first fix-up ↧</button>
+    </div>
+    <div class="evidence">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#e8930c" d="M4 7h3l2-2h6l2 2h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Zm8 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/></svg>
+      <div><b>Screenshot before you close.</b> Nothing here is saved — capture your score, then upload to OneNote.</div>
+    </div>
+  </section>
+
+  <!-- 2. TEACHING -->
+  <section id="notes">
+    <div class="sec-head"><span class="sec-no">02</span><div><h2>Strategy Notes</h2><p class="lead">Three tools for spelling long science words. Keep them handy for the splitter and the patch.</p></div></div>
+    <div class="teach-grid">
+      <div class="card teach">
+        <h3>“ph” says /f/</h3>
+        <div class="svg-wrap">
+          <svg viewBox="0 0 300 70" width="100%" height="70" role="img" aria-label="The letters p and h together make the f sound, as in atmosphere.">
+            <rect x="8" y="20" width="80" height="34" rx="8" fill="#e1efee" stroke="#0e7c7b"/>
+            <text x="48" y="44" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="20" fill="#0e7c7b">ph</text>
+            <text x="104" y="44" font-family="Space Grotesk" font-size="20" fill="#0e7c7b">→ /f/</text>
+            <text x="180" y="44" font-family="Atkinson Hyperlegible" font-size="15" fill="#1b2a4a">atmos<tspan fill="#0e7c7b" font-weight="700">ph</tspan>ere</text>
+          </svg>
+        </div>
+        <p>When you hear /f/ in a science word, it’s often spelt <b>ph</b>, not “f”.</p>
+        <div class="remember"><b>Remember:</b> -sphere is always s-p-<b>h</b>-e-r-e.</div>
+      </div>
+      <div class="card teach">
+        <h3>Chunk it into syllables</h3>
+        <div class="svg-wrap">
+          <svg viewBox="0 0 300 70" width="100%" height="70" role="img" aria-label="Hydrosphere splits into hy, dro and sphere.">
+            <text x="14" y="44" font-family="Space Grotesk" font-weight="700" font-size="19" fill="#1b2a4a">hy<tspan fill="#e8930c"> | </tspan>dro<tspan fill="#e8930c"> | </tspan>sphere</text>
+          </svg>
+        </div>
+        <p>Break a long word into beats you can say: <b>hy · dro · sphere</b>. Spell one chunk at a time.</p>
+        <div class="remember"><b>Remember:</b> tap the syllables — each beat is easier to spell.</div>
+      </div>
+      <div class="card teach">
+        <h3>Build from the root</h3>
+        <p>Every chunk has meaning: <b>hydro</b> (water) + <b>sphere</b> (layer). Knowing the root tells you the chunk.</p>
+        <div class="remember"><b>Remember:</b> root knowledge + syllables = no more guessing.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SYLLABLE SPLITTER -->
+  <section id="syllables">
+    <div class="sec-head"><span class="sec-no">03</span><div><h2>Syllable Splitter</h2><p class="lead">Tap the gaps <b>between letters</b> to split each word into syllables, then press <b>Check splits</b>. Correct breaks turn green; missed ones show faded. Say each beat as you go.</p></div></div>
+    <div id="sylCards" class="syl"></div>
+    <div class="evidence">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#e8930c" d="M4 7h3l2-2h6l2 2h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Zm8 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/></svg>
+      <div><b>Screenshot your splits.</b> Then write each word, syllable by syllable, in your book.</div>
+    </div>
+  </section>
+
+  <!-- 4. /f/ PATCH -->
+  <section id="patch">
+    <div class="sec-head"><span class="sec-no">04</span><div><h2>The /f/ Patch</h2><p class="lead">Each word below has the /f/ sound spelt wrong with a single “f”. <b>Tap the letter that’s wrong</b> to patch it to <b>ph</b>. Tap a good letter by mistake and it’ll flash red.</p></div></div>
+    <div class="patch-tally" role="status" aria-live="polite" id="patchTally">Patched: 0 of 5</div>
+    <div id="patchCards"></div>
+    <div class="evidence">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#e8930c" d="M4 7h3l2-2h6l2 2h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Zm8 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/></svg>
+      <div><b>Screenshot your repaired words.</b> Then upload to OneNote.</div>
+    </div>
+  </section>
+
+  <!-- 5. SPELL-IT LAB -->
+  <section id="spell">
+    <div class="sec-head"><span class="sec-no">05</span><div><h2>Spell-It Lab</h2><p class="lead">Read the clue, type the word, press <b>Check</b>. Each letter turns green when it’s right. Stuck? Tap <b>I need a hand</b>.</p></div></div>
+    <div id="spellCards"></div>
+    <div class="evidence">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#e8930c" d="M4 7h3l2-2h6l2 2h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Zm8 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/></svg>
+      <div><b>This box does not save.</b> Screenshot your green words now and upload to OneNote.</div>
+    </div>
+  </section>
+
+  <!-- 6. CASE CLOSED -->
+  <section id="closed">
+    <div class="sec-head"><span class="sec-no">06</span><div><h2>Case Closed</h2><p class="lead">Exit check. Tick your evidence, rate your confidence, capture everything.</p></div></div>
+    <div class="card">
+      <h3>Exit ticket — without looking back, can you…</h3>
+      <ul class="check-list">
+        <li><input type="checkbox" id="x1"><label for="x1">Spell <b>geosphere</b> from memory (try it in your book)</label></li>
+        <li><input type="checkbox" id="x2"><label for="x2">Explain which two letters spell the /f/ sound in these words</label></li>
+        <li><input type="checkbox" id="x3"><label for="x3">Split <b>lithosphere</b> into its syllables out loud</label></li>
+      </ul>
+      <h3 style="margin-top:18px">Evidence to capture (screenshot or photograph)</h3>
+      <ul class="check-list">
+        <li><input type="checkbox" id="c1"><label for="c1">Recall Check score + fix-ups</label></li>
+        <li><input type="checkbox" id="c2"><label for="c2">My Syllable Splitter results</label></li>
+        <li><input type="checkbox" id="c3"><label for="c3">My patched /f/ words</label></li>
+        <li><input type="checkbox" id="c4"><label for="c4">My green Spell-It Lab words</label></li>
+      </ul>
+      <h3 style="margin-top:18px">How confident am I with these long science words?</h3>
+      <div class="confi" id="confi" role="group" aria-label="Confidence rating">
+        <button aria-pressed="false">Still cracking it</button>
+        <button aria-pressed="false">Getting there</button>
+        <button aria-pressed="false">Case closed ✓</button>
+      </div>
+      <div class="evidence" style="margin-top:18px;margin-bottom:0">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#e8930c" d="M4 7h3l2-2h6l2 2h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Zm8 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/></svg>
+        <div><b>Nothing here is saved.</b> Take your final screenshots now, then upload everything to OneNote.</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer><p>Year 6 Spelling · Word Detectives · Lesson 5: The /f/ Files · Linked to ACARA v9 AC9E6LY08. All content original. Works offline — no data is collected or stored.</p></footer>
+
+<div class="sr-only" id="liveRegion" aria-live="assertive" style="position:fixed;bottom:0;left:0"></div>
+
+<script>
+"use strict";
+const $=(s,el=document)=>el.querySelector(s);
+const $$=(s,el=document)=>Array.from(el.querySelectorAll(s));
+const announce=(m)=>{const r=$("#liveRegion");r.textContent="";setTimeout(()=>r.textContent=m,30);};
+
+/* ---------- 1. WARM-UP ---------- */
+const QUIZ=[
+ {stem:"From Lesson 4 — the root “-sphere” means…",opts:["a sharp point","a ball or layer","a study of"],correct:1,
+  fix:"-sphere means a ball or layer — the atmosphere is the layer of air around the Earth."},
+ {stem:"The root “geo-” means…",opts:["water","air","earth"],correct:2,
+  fix:"geo- means earth: geology (study of the Earth), geosphere (the solid Earth)."},
+ {stem:"In “atmosphere”, which letters make the /f/ sound?",opts:["the “f”","the “ph”","the “th”"],correct:1,
+  fix:"The /f/ sound is spelt “ph” here — atmos-PH-ere. There’s no single “f” in it."},
+ {stem:"How many syllables are in “hydrosphere”?",opts:["2","3","4"],correct:1,
+  fix:"Three: hy · dro · sphere. Tapping the beats helps you spell it."},
+ {stem:"Which spelling is correct?",opts:["lithosfere","lithosphere","lithesphere"],correct:1,
+  fix:"It’s “lithosphere” — litho (rock) + sphere, with the /f/ spelt “ph”."},
+];
+let score=0,firstFix=null;
+$("#total").textContent=QUIZ.length;
+const quizEl=$("#quiz");
+QUIZ.forEach((q,qi)=>{
+  const card=document.createElement("div");card.className="q";card.id="q"+qi;
+  const stem=document.createElement("p");stem.className="stem";stem.textContent=(qi+1)+". "+q.stem;
+  const opts=document.createElement("div");opts.className="opts";opts.setAttribute("role","group");opts.setAttribute("aria-label",q.stem);
+  q.opts.forEach((t,oi)=>{const b=document.createElement("button");b.className="opt";b.type="button";b.textContent=t;b.addEventListener("click",()=>ans(card,opts,b,q,qi,oi));opts.appendChild(b);});
+  const fix=document.createElement("div");fix.className="fixup";fix.id="fix"+qi;fix.innerHTML='<b>Fix-up:</b> '+q.fix;
+  card.append(stem,opts,fix);quizEl.appendChild(card);
+});
+function ans(card,opts,btn,q,qi,oi){
+  if(card.dataset.done)return;card.dataset.done="1";
+  $$(".opt",opts).forEach(b=>b.setAttribute("disabled",""));
+  opts.children[q.correct].classList.add("correct");
+  if(oi===q.correct){btn.classList.add("correct");score++;$("#score").textContent=score;announce("Correct. Score "+score);}
+  else{btn.classList.add("wrong");$("#fix"+qi).classList.add("show");if(firstFix===null){firstFix=qi;$("#jumpFix").disabled=false;}announce("Not quite. Read the fix-up.");}
+}
+$("#jumpFix").addEventListener("click",()=>{if(firstFix!==null)$("#q"+firstFix).scrollIntoView({block:"center"});});
+
+/* ---------- 3. SYLLABLE SPLITTER ---------- */
+// breaks = set of gap indices (gap g sits between letter g and g+1)
+const SYL=[
+ {word:"atmosphere", breaks:[1,4], syl:"at · mos · phere"},
+ {word:"hydrosphere",breaks:[1,4], syl:"hy · dro · sphere"},
+ {word:"lithosphere",breaks:[1,4], syl:"li · tho · sphere"},
+ {word:"biosphere",  breaks:[1,2], syl:"bi · o · sphere"},
+];
+const sylWrap=$("#sylCards");
+SYL.forEach((item,si)=>{
+  const card=document.createElement("div");card.className="syl-card";
+  const head=document.createElement("div");head.className="syl-head";
+  head.innerHTML='<h3 style="margin:0">Word '+(si+1)+' of '+SYL.length+'</h3><span class="hint">'+item.breaks.length+' breaks to find</span>';
+  const row=document.createElement("div");row.className="syl-row";row.setAttribute("aria-label","Tap gaps between letters in "+item.word);
+  const chosen=new Set();
+  const letters=item.word.split("");
+  letters.forEach((ch,i)=>{
+    const sp=document.createElement("span");sp.className="syl-letter";sp.textContent=ch;row.appendChild(sp);
+    if(i<letters.length-1){
+      const g=document.createElement("button");g.type="button";g.className="syl-gap";g.dataset.g=i;
+      g.setAttribute("aria-label","gap after letter "+ch);
+      g.innerHTML='<span class="bar" aria-hidden="true"></span>';
+      g.addEventListener("click",()=>{
+        if(card.dataset.done)return;
+        const on=g.classList.toggle("brk");
+        if(on)chosen.add(i);else chosen.delete(i);
+      });
+      row.appendChild(g);
+    }
+  });
+  const foot=document.createElement("div");foot.className="syl-foot";
+  const btn=document.createElement("button");btn.type="button";btn.className="btn amber";btn.textContent="Check splits";
+  const msg=document.createElement("div");msg.className="syl-msg";
+  btn.addEventListener("click",()=>{
+    if(card.dataset.done)return;card.dataset.done="1";
+    let correct=0;
+    $$(".syl-gap",row).forEach(g=>{
+      const gi=+g.dataset.g;const isBreak=item.breaks.includes(gi);const marked=g.classList.contains("brk");
+      g.classList.remove("brk");
+      if(isBreak&&marked){g.classList.add("ok");correct++;}
+      else if(isBreak&&!marked){g.classList.add("miss");}
+      else if(!isBreak&&marked){g.classList.add("bad");}
+    });
+    const all=correct===item.breaks.length && chosen.size===item.breaks.length;
+    if(all){row.classList.add("solved");msg.textContent="✓ Perfect: "+item.syl;msg.className="syl-msg good";}
+    else{msg.textContent="Correct splits shown in green: "+item.syl;msg.className="syl-msg bad";}
+    btn.disabled=true;announce(item.word+" splits: "+item.syl);
+  });
+  foot.append(btn,msg);
+  card.append(head,row,foot);sylWrap.appendChild(card);
+});
+
+/* ---------- 4. /f/ PATCH ---------- */
+const PATCH=[
+ {bad:"atmosfere", fixIndex:5, good:"atmosphere", clue:"The layer of air around the Earth."},
+ {bad:"hydrosfere",fixIndex:6, good:"hydrosphere",clue:"All the water on the Earth."},
+ {bad:"elefant",   fixIndex:3, good:"elephant",   clue:"A large grey animal with a trunk."},
+ {bad:"dolfin",    fixIndex:3, good:"dolphin",    clue:"A clever sea mammal."},
+ {bad:"alfabet",   fixIndex:2, good:"alphabet",   clue:"The 26 letters, A to Z."},
+];
+let patched=0;
+const patchWrap=$("#patchCards");
+PATCH.forEach((p,pi)=>{
+  const card=document.createElement("div");card.className="patch-card";
+  const clue=document.createElement("div");clue.className="patch-clue";clue.textContent="Clue: "+p.clue;
+  const word=document.createElement("div");word.className="patch-word";word.setAttribute("aria-label","Tap the wrong letter in "+p.bad);
+  p.bad.split("").forEach((ch,i)=>{
+    const b=document.createElement("button");b.type="button";b.className="patch-letter";b.textContent=ch;b.dataset.i=i;
+    b.addEventListener("click",()=>{
+      if(card.dataset.done)return;
+      if(i===p.fixIndex){
+        card.dataset.done="1";b.textContent="ph";b.classList.add("fixed");
+        msg.textContent="✓ Patched → "+p.good;msg.className="patch-msg good";
+        patched++;$("#patchTally").textContent="Patched: "+patched+" of "+PATCH.length+(patched===PATCH.length?" 🎉":"");
+        announce("Correct. "+p.good);
+      }else{
+        b.classList.add("bad-pick");setTimeout(()=>b.classList.remove("bad-pick"),450);
+        msg.textContent="That letter’s fine — find the /f/ sound spelt with a single “f”.";msg.className="patch-msg bad";
+        announce("Not that one.");
+      }
+    });
+    word.appendChild(b);
+  });
+  const msg=document.createElement("div");msg.className="patch-msg";
+  card.append(clue,word,msg);patchWrap.appendChild(card);
+});
+
+/* ---------- 5. SPELL-IT LAB ---------- */
+const SPELL=[
+ {clue:"The layer of gases (air) around the Earth.",word:"atmosphere",tip:"The /f/ is “ph”: atmos-ph-ere."},
+ {clue:"All the water on the Earth.",word:"hydrosphere",tip:"hydro (water) + sphere."},
+ {clue:"The solid rocky outer shell of the Earth.",word:"lithosphere",tip:"litho (rock) + sphere."},
+ {clue:"The study of the Earth’s rocks and structure.",word:"geology",tip:"geo (earth) + -logy (study of)."},
+];
+const spWrap=$("#spellCards");
+SPELL.forEach((s,si)=>{
+  const card=document.createElement("div");card.className="spell-card";
+  const clue=document.createElement("div");clue.className="spell-clue";clue.innerHTML='<span class="tag">Clue '+(si+1)+' · '+s.word.length+' letters</span>'+s.clue;
+  const row=document.createElement("div");row.className="spell-row";
+  const input=document.createElement("input");input.className="spell-input";input.type="text";input.autocomplete="off";input.autocapitalize="off";input.spellcheck=false;
+  input.setAttribute("aria-label","Type the word for: "+s.clue);input.placeholder="type the word…";
+  const checkBtn=document.createElement("button");checkBtn.type="button";checkBtn.className="btn";checkBtn.textContent="Check";
+  const helpBtn=document.createElement("button");helpBtn.type="button";helpBtn.className="btn ghost";helpBtn.textContent="I need a hand";helpBtn.setAttribute("aria-expanded","false");
+  row.append(input,checkBtn,helpBtn);
+  const cells=document.createElement("div");cells.className="spell-cells";
+  const msg=document.createElement("div");msg.className="spell-msg";
+  const help=document.createElement("div");help.className="spell-help";help.innerHTML='Starts with <b>'+s.word.slice(0,2)+'…</b><br>'+s.tip;
+  function check(){
+    const val=input.value.trim().toLowerCase();
+    if(!val){msg.textContent="Type your attempt first.";msg.className="spell-msg bad";return;}
+    cells.innerHTML="";const target=s.word.toLowerCase();let allOk=val.length===target.length;
+    for(let i=0;i<target.length;i++){const c=document.createElement("span");c.className="cellL";const got=val[i]||"";c.textContent=got||"·";
+      if(got===target[i])c.classList.add("ok");else{c.classList.add("no");allOk=false;}cells.appendChild(c);}
+    if(allOk){msg.textContent="✓ Perfect spelling!";msg.className="spell-msg good";input.setAttribute("disabled","");}
+    else{msg.textContent="Not yet — green letters are right. Check the rest and try again.";msg.className="spell-msg bad";}
+    announce(allOk?"Correct spelling of "+s.word:"Keep trying.");
+  }
+  checkBtn.addEventListener("click",check);
+  input.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();check();}});
+  helpBtn.addEventListener("click",()=>{const o=help.classList.toggle("show");helpBtn.setAttribute("aria-expanded",o?"true":"false");helpBtn.textContent=o?"Hide the hand":"I need a hand";});
+  card.append(clue,row,cells,msg,help);spWrap.appendChild(card);
+});
+
+/* ---------- 6. CONFIDENCE ---------- */
+$$("#confi button").forEach(b=>b.addEventListener("click",()=>{$$("#confi button").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");}));
+</script>
+</body>
+</html>
